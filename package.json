@@ -1,0 +1,27 @@
+{
+  "name": "employee-management-system",
+  "version": "1.0.0",
+  "description": "This tool allows users to manage departmental and non-sensitive employee information to allow management to have clear visibility of employee information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jherd801/employeeMS-HW12.git"
+  },
+  "author": "Josh Herd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jherd801/employeeMS-HW12/issues"
+  },
+  "homepage": "https://github.com/jherd801/employeeMS-HW12#readme",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
+}
