@@ -2,7 +2,7 @@
 
 A command line interface tool to allow easy and clear visibility of employees, departments, and roles within an organization.
 
-<img src="https://https://github.com/jherd801/employeeMS-HW12/blob/master/assets/Screenshot.png" alt="Project Screenshot" max-height="400px">
+<img src="https://github.com/jherd801/employeeMS-HW12/blob/master/assets/Screenshot.png" alt="Project Screenshot" max-height="400px">
 
 ## Table of Contents
 
