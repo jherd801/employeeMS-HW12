@@ -7,7 +7,7 @@ VALUES
     ('Field Service'),
     ("Engineering"),
     ('R&D'),
-    ('Human Resources'),
+    ('Human Resources');
 
 INSERT INTO role
     (title, salary, department_id)
@@ -25,3 +25,10 @@ VALUES
     ('Director - HR Operations', 140000, 5),
     ('Generalist - HR', 55000, 5);
 
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('Marky', 'Mark', 1, NULL),
+    ('Billy', 'Williams', 2, 1),
+    ('Frankie', 'Vallens', 3, 1),
+    ('Bettie', 'White', 4, 1);

@@ -1,10 +1,11 @@
+// Requiring in util 
 const util = require("util");
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
+    password: "password",
     database: "employees"
 });
 
