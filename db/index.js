@@ -13,6 +13,51 @@ class DB {
     );
   }
 
+  // Find all roles, join with departments to display the department name
+  findAllRoles() {
+    return this.connection.query(
+      "SELECT role.id, role.title, department.name AS department, role.salary FROM role LEFT JOIN department on role.department_id = department.id;"
+    );
+  }
+
+  // Find all departments, join with employees and roles and sum up utilized department budget
+  findAllDepartments() {
+    return this.connection.query(
+      "SELECT department.id, department.name, SUM(role.salary) AS utilized_budget FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id GROUP BY department.id, department.name;"
+    );
+  }
+
+  // Find all employees except the given employee id
+  findAllPossibleManagers(employeeId) {
+    return this.connection.query(
+      "SELECT id, first_name, last_name FROM employee WHERE id != ?",
+      employeeId
+    );
+  }
+
+  // Create a new employee
+  createEmployee(employee) {
+    return this.connection.query("INSERT INTO employee SET ?", employee);
+  }
+
+  // Update the given employee's role
+  updateEmployeeRole(employeeId, roleId) {
+    return this.connection.query(
+      "UPDATE employee SET role_id = ? WHERE id = ?",
+      [roleId, employeeId]
+    );
+  }
+
+  // Create a new role
+  createRole(role) {
+    return this.connection.query("INSERT INTO role SET ?", role);
+  }
+
+  // Create a new department
+  createDepartment(department) {
+    return this.connection.query("INSERT INTO department SET ?", department);
+  }
+
 }
 
 module.exports = new DB(connection);
